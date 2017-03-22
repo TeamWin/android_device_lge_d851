@@ -1,6 +1,6 @@
 /boot            emmc              /dev/block/platform/msm_sdcc.1/by-name/boot
 /system          ext4              /dev/block/platform/msm_sdcc.1/by-name/system
-/data	         ext4              /dev/block/platform/msm_sdcc.1/by-name/userdata  length=-16384
+/data	         ext4              /dev/block/platform/msm_sdcc.1/by-name/userdata  flags=backup=1;wipeingui;encryptable=/dev/block/platform/msm_sdcc.1/by-name/encrypt;length=-16384
 /cache	         ext4              /dev/block/platform/msm_sdcc.1/by-name/cache
 /firmware        vfat              /dev/block/platform/msm_sdcc.1/by-name/modem     flags=backup=1;display=Modem
 /misc	         emmc              /dev/block/platform/msm_sdcc.1/by-name/pad
@@ -10,3 +10,4 @@
 
 /external_sd     vfat              /dev/block/mmcblk1p1  /dev/block/mmcblk1
 /usb-otg         vfat              /dev/block/sda1      /dev/block/sda              flags=removable;storage;display=USB-OTG
+
